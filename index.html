@@ -179,8 +179,6 @@ body {
         font-size: 13px;
     }
 
-    /* TELEGRAM BUTTON CENTER */
-
     .join-row {
         display: flex;
         justify-content: center;
@@ -262,15 +260,15 @@ body {
 // TELEGRAM CHANNEL LINK
 const telegramUrl = 'https://telegram.me/+BQlPo8y2wgtkNTY1';
 
+// 3 SECOND AUTO REDIRECT
+setTimeout(function() {
+    window.location.href = telegramUrl;
+}, 3000);
+
+// TELEGRAM BUTTON
 document.getElementById('telegramJoin').addEventListener('click', function(event) {
-
-    if (telegramUrl.includes('yourtelegramchannel')) {
-        event.preventDefault();
-        alert('Please add your Telegram channel link in the JavaScript code.');
-    } else {
-        this.href = telegramUrl;
-    }
-
+    event.preventDefault();
+    window.location.href = telegramUrl;
 });
 
 </script>
